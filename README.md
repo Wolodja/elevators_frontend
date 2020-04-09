@@ -1,4 +1,4 @@
-## Elevator Simulation Backend
+## Elevator Simulation Frontend
 
 Angular 9.1 program. GUI for elevator application. 
 
