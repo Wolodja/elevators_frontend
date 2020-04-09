@@ -1,5 +1,10 @@
 @import '~bootstrap/dist/css/bootstrap.css';
 
+.red-snackbar {
+  background: #fff;
+  color: #56ab2f;
+}
+
 @font-face {
     font-family: Poppins-Regular;
     src: url('../src/assets/fonts/poppins/Poppins-Regular.ttf'); 
@@ -281,3 +286,5 @@
   .select-css option {
     font-weight:normal;
   }
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

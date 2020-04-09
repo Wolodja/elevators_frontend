@@ -8,19 +8,18 @@
             <label for="business">Choose Floor</label>
         </div>
         <div class="col">
-            <select class="select-css">
-                <option>1</option>
-                <option>2</option>
+            <select [(ngModel)]="requestOnFloor" class="select-css">
+                <option value={{floor}} *ngFor="let floor of noOfFloors">{{floor}}</option>
             </select>
         </div>
     </div>
     <br />
     <div class="row" style="margin-bottom: 10px;">
         <div class="col">
-            <button type="button" class="btn btn-light" style="float: right; width: 100px;">UP</button>
+            <button type="button"(click)="requestElevator('UP')" class="btn btn-light" style="float: right; width: 100px;">UP</button>
         </div>
         <div class="col">
-            <button type="button" class="btn btn-light" style="width: 100px;">DOWN</button>
+            <button type="button" (click)="requestElevator('DOWN')" class="btn btn-light" style="width: 100px;">DOWN</button>
         </div>
     </div>
     <br>
@@ -35,9 +34,8 @@
             <label for="business">Choose Elevator</label>
         </div>
         <div class="col">
-            <select class="select-css">
-                <option>1</option>
-                <option>2</option>
+            <select [(ngModel)]="selectedElevator" class="select-css">
+                <option value={{elevator}} *ngFor="let elevator of noOfElevators">{{elevator}}</option>
             </select>
         </div>
     </div>
@@ -46,9 +44,8 @@
             <label for="business">Choose Floor</label>
         </div>
         <div class="col">
-            <select class="select-css">
-                <option>1</option>
-                <option>2</option>
+            <select [(ngModel)]="selectedFloorInElevator" class="select-css">
+                <option value={{floor}} *ngFor="let floor of noOfFloors">{{floor}}</option>
             </select>
         </div>
     </div>
@@ -57,7 +54,7 @@
         <div class="col">
         </div>
         <div class="col">
-            <button type="button" class="btn btn-light" style="width: 100px;">SEND</button>
+            <button type="button" (click)="requestInsideElevator()" class="btn btn-light" style="width: 100px;">SEND</button>
         </div>
     </div>
 </div>
