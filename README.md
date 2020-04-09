@@ -7,12 +7,12 @@ There are two types of requests that the program can send:
 2. Request inside elevator
 
 
-## Backend for elevator app
+### Backend for elevator app
 
 To use this program you need first run Java Spring Boot application that simulates the work of elevator logic engine.
 
 https://github.com/Wolodja/elevator_backend
-## Development server
+### Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
