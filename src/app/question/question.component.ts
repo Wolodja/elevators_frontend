@@ -14,17 +14,36 @@ export class QuestionComponent implements OnInit {
 
   numberOfElevators: number;
 
-  showError : boolean = false;
+  numberOfFloors: number;
+
+  showElevatorError: boolean = false;
+  showFloorError: boolean = false;
 
   ngOnInit(): void {
   }
 
   validateAndProceed(): void {
+    if (this.validNumberOfElevators() && this.validNumberOfFloors()) {
+      this.router.navigate(['/requests/' + this.numberOfElevators + "/" + this.numberOfFloors]);
+    }
+  }
+  validNumberOfElevators(): boolean {
     if (this.numberOfElevators && this.numberOfElevators >= 0) {
-      this.router.navigate(['/requests/'+ this.numberOfElevators]);
-    } else{
-      this.showError = true;
-      console.log("Incorrect number of elevators!");
+      this.showElevatorError = false;
+      return true;
+    } else {
+      this.showElevatorError = true;
+      return false;
+    }
+  }
+
+  validNumberOfFloors(): boolean {
+    if (this.numberOfFloors && this.numberOfFloors >= 0) {
+      this.showFloorError = false;
+      return true;
+    } else {
+      this.showFloorError = true;
+      return false;
     }
   }
 

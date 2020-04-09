@@ -8,7 +8,7 @@ import { RequestsComponent } from './requests/requests.component';
 const routes: Routes = [
   { path: '', redirectTo: '/question', pathMatch: 'full' },
   { path: 'question', component: QuestionComponent },
-  { path: 'requests/:elevatorAmount', component: RequestsComponent }
+  { path: 'requests/:elevatorAmount/:floorsAmount', component: RequestsComponent }
 ];
 
 @NgModule({
